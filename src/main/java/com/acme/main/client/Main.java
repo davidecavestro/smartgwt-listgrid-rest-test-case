@@ -13,7 +13,7 @@ import com.smartgwt.client.widgets.grid.ListGrid;
 import com.smartgwt.client.widgets.layout.VLayout;
 
 /**
- * This examnple shows a {@link ListGrid} receiving data from a
+ * This example shows a {@link ListGrid} receiving data from a
  * {@link RestDataSource} hacked just to let Jetty (in Dev Mode) serve static
  * json paged responses.
  * 
@@ -33,7 +33,9 @@ public class Main implements EntryPoint {
                         .getAttributeAsInt("startRow");
                 if (startRow != 0) {
                     final int pagedStartRow = (startRow / 25) * 25;
-                    // just to get a valid response for paging (by 25)
+                    // just to get a valid response for paging (serving fake
+                    // responses only for fake requests with startRow multiple
+                    // 25)
                     dsRequest.setActionURL("gwt/data_" + pagedStartRow + ".js");
                 }
                 return dsRequest.getData();
@@ -64,8 +66,8 @@ public class Main implements EntryPoint {
         listGrid.setHeight100();
         listGrid.setDataSource(dataSource);
         listGrid.setDataPageSize(25);
-        listGrid.setDrawAheadRatio(1);
-        listGrid.setDrawAllMaxCells(0);// to avoid drawing all rows at startup
+        listGrid.setDrawAheadRatio(1);// do not prefetch data
+        listGrid.setDrawAllMaxCells(0);// avoid drawing all rows at startup
         listGrid.setAutoFetchData(true);
 
         layout.addMember(listGrid);
