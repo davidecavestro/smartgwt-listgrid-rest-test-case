@@ -1,7 +1,7 @@
 A Gradle-Eclipse example project showing a ListGrid receiving data from a RestDataSource adapted 
 in order to let Jetty (in GWT Dev Mode) serve static json paged responses.
 
-THe project uses Gradle as a build automation tool integrated with the IDE. Hence if you want to use the IDE you need to 
+The project uses Gradle as a build automation tool integrated with the IDE. Hence if you want to use the IDE you need to 
 install the great Gradle Eclipse tooling integration. You can still use only Gradle using its GUI or from command line.
 
 How To
