@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="gwt">
+	<inherits name='com.google.gwt.user.User'/>
+	
+		<!-- Inherit from SmartGWT. -->
+	<inherits name="com.smartgwt.SmartGwt"/>
+	 
+	<!-- Enable the developer console -->
+	<inherits name="com.smartgwt.tools.SmartGwtTools"/>
+
+	<!-- Add logging support. -->
+	<inherits name='com.google.gwt.logging.Logging' />
+<!-- 	<set-property name='gwt.logging.logLevel' value='FINE' /> -->
+	<set-property name='gwt.logging.popupHandler' value='DISABLED' />
+	<set-property name='gwt.logging.consoleHandler' value='ENABLED' />
+<!-- 	<set-property name='gwt.logging.firebugHandler' value='ENABLED' /> -->
+	
+	<entry-point class="com.acme.main.client.Main" />
+</module>
