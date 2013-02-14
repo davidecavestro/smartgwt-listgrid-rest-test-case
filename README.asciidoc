@@ -1,3 +1,6 @@
+smartgwt-listgrid-rest-test-case image:https://buildhive.cloudbees.com/job/davidecavestro/job/smartgwt-listgrid-rest-test-case/badge/icon["Build Status", link="https://buildhive.cloudbees.com/job/davidecavestro/job/smartgwt-listgrid-rest-test-case/"]
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 A Gradle-Eclipse example project showing a ListGrid receiving data from a RestDataSource adapted 
 in order to let Jetty (in GWT Dev Mode) serve static json paged responses.
 
